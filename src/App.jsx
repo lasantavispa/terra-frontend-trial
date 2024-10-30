@@ -44,7 +44,7 @@ function App() {
     <>
       <Navbar navbar={navbarData} />
       <Routes>
-        <Route path='/' element = {<Landing />} />
+        <Route path='/' element = {<Landing hero={heroData} body={bodyData}/>} />
         <Route path='/story' element = {<Story/>} />
       </Routes>
     </>

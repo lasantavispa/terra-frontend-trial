@@ -2,11 +2,11 @@ import React from 'react'
 import Content from './Content'
 import Hero from './Hero'
 
-function Landing() {
+function Landing({hero, body}) {
   return (
     <>
-    <Hero/>
-    <Content />
+    <Hero hero={hero}/>
+    <Content body={body}/>
     </>
   )
 }
