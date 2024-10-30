@@ -19,4 +19,11 @@
 
 #root{
     background-color: $color-background;
+    font-family: $font-body;
+    color: #0F0F0F;
  }
+
+a{
+    text-decoration: none;
+    color: #0F0F0F;
+}

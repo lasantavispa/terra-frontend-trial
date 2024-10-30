@@ -1,7 +1,11 @@
-import { useEffect, useState } from 'react'
-import './scss/Core.scss'
-import './scss/App.scss'
+import { useEffect, useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import './scss/Core.scss';
+import './scss/App.scss';
 import Api from './services/Api';
+import Navbar from './components/Navbar';
+import Story from './components/Story';
+import Landing from './components/Landing';
 
 function App() {
   const [navbarData, setNavbarData] = useState(null);
@@ -23,21 +27,28 @@ function App() {
       }
     };
     fetchData();
-  
-  },[])
+  }, []);
 
   if (loading) {
     return (
-      <div className='loader'>
-        <img src="https://tf-frontend.netlify.app/images/v1/logo.svg" alt="Terra Logo" />
+      <div className="loader">
+        <img
+          src="https://tf-frontend.netlify.app/images/v1/logo.svg"
+          alt="Terra Logo"
+        />
       </div>
     );
   }
 
   return (
     <>
+      <Navbar navbar={navbarData} />
+      <Routes>
+        <Route path='/' element = {<Landing />} />
+        <Route path='/story' element = {<Story/>} />
+      </Routes>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
