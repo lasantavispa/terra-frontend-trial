@@ -20,7 +20,7 @@ This project is a responsive web page developed as a technical test for a Fronte
 
 - **Display State Management:**
   - On the first visit, the page should display the design as shown on the left side (initial state).
-  - On the second visit, only the button and the title should change its design. It is used `localStorage` to manage this display state.
+  - On the second visit, only the button and the title should change its design. `LocalStorage` is used to manage this display state.
 
 - **Story Component Route:** A dedicated route exists for the story component, allowing users to navigate directly to it.
 
