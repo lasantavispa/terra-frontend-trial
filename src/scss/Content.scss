@@ -80,6 +80,9 @@
     &.type--green {
       background-color: Core.$color-green;
     }
+    &.type--grey{
+      background-color: grey;
+    }
   }
   &__date {
     font-family: Core.$font-title;

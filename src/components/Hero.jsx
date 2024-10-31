@@ -2,6 +2,8 @@ import React, {useEffect, useState}  from 'react'
 import { setLocalStorage, getLocalStorage } from '../services/LocalStorage';
 import '../scss/Hero.scss'
 import PropTypes from 'prop-types';
+import notfound from '../../public/notfound.png';
+
 
 
 function Hero({hero}) {
@@ -16,7 +18,7 @@ function Hero({hero}) {
   }, [])
 
   const backgroundStyle = {
-    backgroundImage: `url(${hero.bg_image})`,
+    backgroundImage: `url(${hero.bg_image || notfound})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
   }

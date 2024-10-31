@@ -1,6 +1,7 @@
 import React from 'react';
 import '../scss/Content.scss';
 import PropTypes from 'prop-types';
+import notfound from '../../public/notfound.png';
 
 
 function Content({ body }) {
@@ -10,13 +11,13 @@ function Content({ body }) {
       <div className="section__list">
         {Object.values(body.posts).map((post, index) => (
           <article className="article" key={index}>
-            <img className="article__img" src={post.image} alt="" />
+            <img className="article__img" src={post.image || notfound} alt="" />
             <div
               className={`article__type ${
-                post.type === 'Type A' ? 'type--pink' : 'type--green'
+                post.type === 'Type A' ? 'type--pink' : post.type === 'Type B' ? 'type--green' : 'type--grey'
               }`}
             >
-              {post.type}
+              {post.type === 'Type A' || post.type === 'Type B' ? post.type : 'No type'}
             </div>
             <p className="article__date">{post.date}</p>
             <p className="article__title">{post.title}</p>

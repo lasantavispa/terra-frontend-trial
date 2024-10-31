@@ -3,6 +3,7 @@
 .background {
     display: flex;
     justify-content: center;
+    height: fit-content;
     background-image: url("../../public/background.png");
     background-size: cover;
 }
