@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
-import '../scss/Navbar.scss';
+import '../scss/NavBar.scss';
 
 function Navbar({ navbar }) {
   const [nav, setNav] = useState(false);
