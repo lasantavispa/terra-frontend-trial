@@ -1,0 +1,65 @@
+@import 'Core.scss';
+
+.background {
+    display: flex;
+    justify-content: center;
+    background-image: url("background.png");
+    background-size: cover;
+}
+.story-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    @media (min-width: 768px) {
+        flex-direction: row;
+        gap: 135px;
+        padding: 120px 0;
+
+    }
+    &__img{
+        width: 300px;
+        height: 400px;
+        padding-top: 15px;
+        @media (min-width: 768px) {
+            width: 584px;
+            height: 778px;
+        }
+    }
+    &__text {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        width: 276px; 
+        display: flex;
+        flex-direction: column;
+        gap: 24px;      
+
+    }
+    &__h1 {
+        font-family: $font-title;
+        @media (min-width: 768px) {
+            font-size: 40px;
+            line-height: 53px;
+        }        
+    }
+    &__p {
+        font-size: 14px;
+        line-height: 21px;
+    }
+    &__btn {
+        width: 156px;
+        text-align: center;
+        color: $color-button-text;
+        font-family: $font-body;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        padding: 16px 40px;
+        background-color: $color-dark-green;
+      }
+      &__btn:hover {
+        background-color: $color-pink;
+      }
+}
