@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
@@ -12,6 +12,16 @@ function Navbar({ navbar }) {
   const closeNav = () => {
     setNav(false);
   };
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768 && nav) {
+        setNav(false);
+      }
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [nav]);
 
   return (
     <header className="navbar">
