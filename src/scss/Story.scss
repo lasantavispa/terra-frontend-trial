@@ -1,4 +1,4 @@
-@import 'Core.scss';
+@use 'Core.scss';
 
 .background {
     display: flex;
@@ -37,7 +37,7 @@
 
     }
     &__h1 {
-        font-family: $font-title;
+        font-family: Core.$font-title;
         @media (min-width: 768px) {
             font-size: 40px;
             line-height: 53px;
@@ -50,16 +50,16 @@
     &__btn {
         width: 156px;
         text-align: center;
-        color: $color-button-text;
-        font-family: $font-body;
+        color: Core.$color-button-text;
+        font-family: Core.$font-body;
         font-weight: bold;
         border: none;
         cursor: pointer;
         font-size: 16px;
         padding: 16px 40px;
-        background-color: $color-dark-green;
+        background-color: Core.$color-dark-green;
       }
       &__btn:hover {
-        background-color: $color-pink;
+        background-color: Core.$color-pink;
       }
 }

@@ -1,4 +1,4 @@
-@import 'Core.scss';
+@use 'Core.scss';
 
 .section {
   display: flex;
@@ -12,7 +12,7 @@
   }
 
   &__h1 {
-    font-family: $font-title;
+    font-family: Core.$font-title;
     font-size: 28px;
     font-weight: bold;
     letter-spacing: 1px;
@@ -36,17 +36,17 @@
   }
   &__btn {
     text-align: center;
-    color: $color-button-text;
-    font-family: $font-body;
+    color: Core.$color-button-text;
+    font-family: Core.$font-body;
     font-weight: bold;
     border: none;
     cursor: pointer;
     font-size: 16px;
     padding: 16px 40px;
-    background-color: $color-green;
+    background-color: Core.$color-green;
   }
   &__btn:hover {
-    background-color: $color-pink;
+    background-color: Core.$color-pink;
   }
 }
 .article {
@@ -66,23 +66,23 @@
   &__type {
     position: absolute;
     margin: 12px;
-    font-family: $font-title;
+    font-family: Core.$font-title;
     font-size: 10px;
     font-weight: bold;
-    color: $color-button-text;
+    color: Core.$color-button-text;
     width: 58px;
     text-align: center;
     border-radius: 15px;
     padding: 7px 0;
     &.type--pink {
-      background-color: $color-pink;
+      background-color: Core.$color-pink;
     }
     &.type--green {
-      background-color: $color-green;
+      background-color: Core.$color-green;
     }
   }
   &__date {
-    font-family: $font-title;
+    font-family: Core.$font-title;
     font-size: 10px;
     font-weight: 700;
     padding-top: 16px;

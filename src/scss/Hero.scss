@@ -1,8 +1,8 @@
-@import 'Core.scss';
+@use 'Core.scss';
 
 .hero {
     height: 70vh;
-    color: $color-button-text;
+    color: Core.$color-button-text;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -52,7 +52,7 @@
     }  
 
     &__h1{
-        font-family: $font-title;
+        font-family: Core.$font-title;
         font-size: 36px;
         letter-spacing: 1px;
         @media (min-width: 768px) {
@@ -69,8 +69,8 @@
 
     &__btn{
       text-align: center;
-      color: $color-button-text;
-      font-family: $font-body;
+      color: Core.$color-button-text;
+      font-family: Core.$font-body;
       font-weight: bold;
       border: none;
       cursor: pointer;
@@ -78,13 +78,13 @@
       padding: 16px 40px;
 
       &.btn-green {
-        background-color: $color-green;
+        background-color: Core.$color-green;
       }
       &.btn-black {
-        background-color: $color-black;
+        background-color: Core.$color-black;
       }
     }
     &__btn:hover {
-        background-color: $color-pink;
+        background-color: Core.$color-pink;
     }
 }
