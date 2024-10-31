@@ -1,0 +1,90 @@
+@import 'Core.scss';
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+  padding: 64px 0;
+  @media (min-width: 768px) {
+    padding: 120px 0;
+  }
+
+  &__h1 {
+    font-family: $font-title;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 38px;
+    padding: 0px 16px 32px 16px;
+    text-align: center;
+    @media (min-width: 768px) {
+      padding: 0px 16px 72px 16px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+    padding-bottom: 56px;
+    @media (min-width: 768px) {
+      padding-bottom: 72px;
+    }
+  }
+  &__btn {
+    text-align: center;
+    color: $color-button-text;
+    font-family: $font-body;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 16px 40px;
+    background-color: $color-green;
+  }
+  &__btn:hover {
+    background-color: $color-pink;
+  }
+}
+.article {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+
+  &__img {
+    height: 300px;
+    width: 300px;
+    @media (min-width: 768px) {
+      height: 378px;
+
+      width: 283px;
+    }
+  }
+  &__type {
+    position: absolute;
+    margin: 12px;
+    font-family: $font-title;
+    font-size: 10px;
+    font-weight: bold;
+    color: $color-button-text;
+    width: 58px;
+    text-align: center;
+    border-radius: 15px;
+    padding: 7px 0;
+    &.type--pink {
+      background-color: $color-pink;
+    }
+    &.type--green {
+      background-color: $color-green;
+    }
+  }
+  &__date {
+    font-family: $font-title;
+    font-size: 10px;
+    font-weight: 700;
+    padding-top: 16px;
+  }
+}

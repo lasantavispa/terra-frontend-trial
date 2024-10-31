@@ -35,14 +35,15 @@ function Navbar({ navbar }) {
     </header>
   );
 }
+
 Navbar.propTypes = {
   navbar: PropTypes.shape({
-    logo: PropTypes.string,
+    logo: PropTypes.string.isRequired,
     menu: PropTypes.shape({
-      menu_item_1: PropTypes.string,
-      menu_item_2: PropTypes.string,
-      menu_item_3: PropTypes.string,
-    }),
-  }),
-};
+      menu_item_1: PropTypes.string.isRequired,
+      menu_item_2: PropTypes.string.isRequired,
+      menu_item_3: PropTypes.string.isRequired,
+    }).isRequired,
+  }) }
+
 export default Navbar;
