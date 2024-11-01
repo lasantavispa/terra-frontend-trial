@@ -1,14 +1,15 @@
-import React from 'react'
-import Content from './Content'
-import Hero from './Hero'
+import React from 'react';
+import Content from './Content';
+import Hero from './Hero';
+import PropTypes from 'prop-types';
 
-function Landing({hero, body}) {
+function Landing({ hero, body }) {
   return (
     <>
-    <Hero hero={hero}/>
-    <Content body={body}/>
+      <Hero hero={hero} />
+      <Content body={body} />
     </>
-  )
+  );
 }
 
 Landing.propTypes = {
@@ -30,12 +31,14 @@ Landing.propTypes = {
   }),
   body: PropTypes.shape({
     title: PropTypes.string.isRequired,
-    posts: PropTypes.objectOf(PropTypes.shape({
-      image: PropTypes.string,
-      title: PropTypes.string,
-      content: PropTypes.string,
-    })),
+    posts: PropTypes.objectOf(
+      PropTypes.shape({
+        image: PropTypes.string,
+        title: PropTypes.string,
+        content: PropTypes.string,
+      })
+    ),
   }),
-}
+};
 
-export default Landing
+export default Landing;
