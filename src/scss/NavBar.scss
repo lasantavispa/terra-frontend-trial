@@ -3,22 +3,22 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 30px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px 0px 20px 30px;
     height: 60px;
     @media (min-width: 768px) {
         padding: 20px;
         padding-left: 40px;
         height: 100px;        
     }
+
     &__logo{
         width: 122px;
         @media (min-width: 768px) {
             width: 278px;
-            height: 48px;            
+            // height: 48px;            
         }
     }
+
     &__hamburger{
         position: absolute;
         right: 0;
@@ -29,6 +29,7 @@
             display: none;
         }
     }
+
     &__list{
         list-style-type: none;
         display: flex;
@@ -36,7 +37,6 @@
         align-items: end;
         gap: 15px;
         background-color: Core.$color-background;
-
 
         @media (max-width:767px) {
             position: absolute;
@@ -58,6 +58,7 @@
             align-items: center;
         }
     }
+
     &__blur{
         position: fixed;
         top: 0;

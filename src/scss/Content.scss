@@ -57,9 +57,9 @@
   &__img {
     height: 300px;
     width: 300px;
+    object-fit: cover;
     @media (min-width: 768px) {
       height: 378px;
-
       width: 283px;
     }
   }
@@ -80,7 +80,7 @@
     &.type--green {
       background-color: Core.$color-green;
     }
-    &.type--grey{
+    &.type--grey {
       background-color: grey;
     }
   }

@@ -11,7 +11,7 @@ function Content({ body }) {
       <div className="section__list">
         {Object.values(body.posts).map((post, index) => (
           <article className="article" key={index}>
-            <img className="article__img" src={post.image || notfound} alt="" />
+            <img className="article__img" src={post.image || notfound} alt="Image-article" />
             <div
               className={`article__type ${
                 post.type === 'Type A' ? 'type--pink' : post.type === 'Type B' ? 'type--green' : 'type--grey'

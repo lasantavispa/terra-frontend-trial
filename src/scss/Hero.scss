@@ -1,45 +1,41 @@
 @use 'Core.scss';
 
 .hero {
-    height: 70vh;
-    color: Core.$color-button-text;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    @media (min-width:768px) {
-        margin: 0px 2px;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 1fr;
-        &__shape-1{
-            width: 70%;
-            align-self: end;
-            justify-items: end;
-            grid-column: 1;
-        }
-    
-        &__shape-2{
-            width: 70%;
-            align-self: start;
-            justify-self: end;
-            grid-column: 3;
-        }
+  height: 70vh;
+  color: Core.$color-button-text;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 767px) {
+    &__shape-1 {
+      display: none;
+    }
+    &__shape-2 {
+      display: none;
+    }
+  }
+
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    &__shape-1 {
+      width: 70%;
+      align-self: end;
+      justify-items: end;
+      grid-column: 1;
     }
 
-    @media (max-width:767px) {
-        &__shape-1{
-            display: none;
-        }
-        &__shape-2{
-            display: none;
-        }
-        
+    &__shape-2 {
+      width: 70%;
+      align-self: start;
+      justify-self: end;
+      grid-column: 3;
     }
-   
-  
-    &__content{
-    grid-column: 2;
+  }
+
+  &__content {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -47,44 +43,45 @@
     text-align: center;
     gap: 24px;
     @media (min-width: 768px) {
-        gap: 32px;
+      gap: 30px;
+      grid-column: 2;
     }
-    }  
+  }
 
-    &__h1{
-        font-family: Core.$font-title;
-        font-size: 36px;
-        letter-spacing: 1px;
-        @media (min-width: 768px) {
-            font-size: 65px;
-        }
+  &__h1 {
+    font-family: Core.$font-title;
+    font-size: 36px;
+    letter-spacing: 1px;
+    @media (min-width: 768px) {
+      font-size: 65px;
     }
+  }
 
-    &__p{
-        max-width: 584px ;
-        line-height: 24px;
-        letter-spacing: 0.2px;
-        padding: 20px;
-    }
+  &__p {
+    max-width: 584px;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    padding: 20px;
+  }
 
-    &__btn{
-      text-align: center;
-      color: Core.$color-button-text;
-      font-family: Core.$font-body;
-      font-weight: bold;
-      border: none;
-      cursor: pointer;
-      font-size: 16px;
-      padding: 16px 40px;
+  &__btn {
+    text-align: center;
+    color: Core.$color-button-text;
+    font-family: Core.$font-body;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 16px 40px;
 
-      &.btn-green {
-        background-color: Core.$color-green;
-      }
-      &.btn-black {
-        background-color: Core.$color-black;
-      }
+    &.btn-green {
+      background-color: Core.$color-green;
     }
-    &__btn:hover {
-        background-color: Core.$color-pink;
+    &.btn-black {
+      background-color: Core.$color-black;
     }
+  }
+  &__btn:hover {
+    background-color: Core.$color-pink;
+  }
 }
