@@ -26,7 +26,6 @@ function Navbar({ navbar }) {
   return (
     <header className="navbar">
       <Link to="/">
-        {' '}
         <img src={navbar.logo} alt="logo" className="navbar__logo" />
       </Link>
       <div className="navbar__hamburger">
